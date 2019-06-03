@@ -13,8 +13,8 @@ void loop() {
 
 void INT_0() {
 
-  if (digitalRead(2))
-    pre = millis();
+  if (!digitalRead(2))
+    pre = micros();
   else
-    Serial.println(String(millis()-pre));
+    Serial.println(String(micros()-pre));
 }
