@@ -9,12 +9,14 @@
 void lcd_cmd(int num) {
 
   int tmp = 0x80;
-
+ 
   for (int i = 0; i < 2; i ++) {
 
     digitalWrite(RS, LOW);
 
     for (int j = 13; j >= 10; j--) {
+
+      
 
       if (num & tmp)
         digitalWrite(j, HIGH);

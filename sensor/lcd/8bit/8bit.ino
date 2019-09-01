@@ -87,7 +87,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  lcd_send_data(0x31);
+  lcd_send_data("a");
   delay(1000);
 
   
