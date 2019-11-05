@@ -1,6 +1,6 @@
-#define RS 3
-#define RW 4
-#define EN 5
+#define RS 2
+#define RW 3
+#define EN 4
 
 #define D0 6
 #define D1 7
@@ -20,7 +20,7 @@ void lcd_send_cmd(unsigned char  x) {
 
   for (int i = 0; i < 8; i++) {
     
-    digitalWrite(i+6, (tmp & x) > 0 ? HIGH : LOW);
+    digitalWrite(i+5, (tmp & x) > 0 ? HIGH : LOW);
     tmp  = tmp << 1;;
   }
 
@@ -42,7 +42,7 @@ void lcd_send_data(unsigned char  x) {
 
   for (int i = 0; i < 8; i++) {
     
-    digitalWrite(i+6, (tmp & x) > 0 ? HIGH : LOW);
+    digitalWrite(i+5, (tmp & x) > 0 ? HIGH : LOW);
     tmp  = tmp << 1;;
   }
 
